@@ -10,10 +10,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/orders")
 public class OrderController {
 
-   /* @GetMapping("/hello")
-    public String hello() {
-        return "hello";
-    }*/
 
     @GetMapping("/{orderId}")
     public ResponseEntity<Order> getOrder(@PathVariable String orderId) {
