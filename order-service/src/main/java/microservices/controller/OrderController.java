@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 public class OrderController {
 
 
-    public ResponseEntity<Order> getOrder(@PathVariable String orderId) {
+    public ResponseEntity<Order> getOrder(String orderId) {
         if ("999".equals(orderId)) {
             System.out.println("Order not found with id: " + orderId);
         }
