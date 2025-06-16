@@ -1,6 +1,5 @@
 package microservices.controller;
 
-import microservices.exception.OrderNotFoundException;
 import microservices.model.Order;
 import microservices.model.Product;
 import org.springframework.http.ResponseEntity;
