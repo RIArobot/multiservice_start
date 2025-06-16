@@ -1,7 +1,7 @@
 package microservices.controller;
 
 import microservices.exception.ProductNotFoundException;
-import microservices.model.Product;
+import model.Product;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

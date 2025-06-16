@@ -3,7 +3,6 @@ package microservices.controller;
 import microservices.client.ProductClient;
 import microservices.exception.OrderNotFoundException;
 import feign.FeignException;
-import microservices.model.Order;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

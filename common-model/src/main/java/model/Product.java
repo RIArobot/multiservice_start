@@ -1,5 +1,4 @@
-package microservices.model;
-
+package model;
 
 public record Product(
         String id,
