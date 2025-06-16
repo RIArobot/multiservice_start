@@ -1,5 +1,6 @@
 package microservices.controller;
 
+import microservices.exception.OrderNotFoundException;
 import microservices.model.Order;
 import microservices.model.Product;
 import org.springframework.http.ResponseEntity;
@@ -9,15 +10,16 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/orders")
 public class OrderController {
 
-    @GetMapping("/hello")
+   /* @GetMapping("/hello")
     public String hello() {
         return "hello";
-    }
+    }*/
 
     @GetMapping("/{orderId}")
     public ResponseEntity<Order> getOrder(@PathVariable String orderId) {
+
         if ("999".equals(orderId)) {
-            System.out.println("Order not found with id: " + orderId);
+           throw new OrderNotFoundException("Order not found with id: " + orderId);
         }
 
         return ResponseEntity.ok(
