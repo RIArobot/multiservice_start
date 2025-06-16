@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 public class OrderController {
 
 
-    @GetMapping("/{orderId}")
     public ResponseEntity<Order> getOrder(@PathVariable String orderId) {
         if ("999".equals(orderId)) {
             System.out.println("Order not found with id: " + orderId);
