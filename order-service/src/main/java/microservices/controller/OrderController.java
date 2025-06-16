@@ -14,7 +14,8 @@ public class OrderController {
         return "hello";
     }
 
-    public ResponseEntity<Order> getOrder(String orderId) {
+    @GetMapping("/{orderId}")
+    public ResponseEntity<Order> getOrder(@PathVariable String orderId) {
         if ("999".equals(orderId)) {
             System.out.println("Order not found with id: " + orderId);
         }
