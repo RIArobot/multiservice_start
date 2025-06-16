@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/orders")
 public class OrderController {
 
+    @GetMapping("/hello")
+    public String hello() {
+        return "hello";
+    }
 
     public ResponseEntity<Order> getOrder(String orderId) {
         if ("999".equals(orderId)) {
